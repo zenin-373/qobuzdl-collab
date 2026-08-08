@@ -1,0 +1,6 @@
+click>=8.1
+requests>=2.31
+rich>=13.0
+mutagen>=1.47
+# Uncomment for SOCKS5 proxy support:
+# PySocks>=1.7
