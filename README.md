@@ -23,6 +23,7 @@ Artist Name/
 - Duration check (detects 30s previews and retries with other tokens)
 - Quality fallback for broken CDN files
 - Customizable templates, metadata, cover art
+- **Google Colab** notebook included
 
 ## Requirements
 
@@ -30,11 +31,31 @@ Artist Name/
 - Active Qobuz subscription(s)
 - `app_id`, `secret`, and one or more `auth_token`s
 
-## Installation
+## Google Colab (easiest)
+
+1. Open the notebook:  
+   **[qobuzdl_collab_colab.ipynb](https://github.com/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb)**  
+   → click **Open in Colab** (or File → Open notebook in Colab)
+
+2. Run the cells in order:
+   - **Install**
+   - **Config** → put your `app_id`, `secret`, and tokens
+   - **Download** → paste album / artist / track URL
+   - **Zip & download** → get the files on your computer
+
+Direct Colab link (after opening the notebook once):  
+`https://colab.research.google.com/github/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb`
+
+## Local Installation
 
 ```bash
 git clone https://github.com/zenin-373/qobuzdl-collab.git
 cd qobuzdl-collab
+
+# Add the download engine (one-time)
+curl -o qobuz_dl/downloader.py \
+  https://raw.githubusercontent.com/jcomicsutils/qobuz-dl/main/qobuz_dl/downloader.py
+
 python3 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -49,7 +70,7 @@ qobuzdl-collab ...
 qobuz-dl ...
 ```
 
-## Quick Start
+## Quick Start (local)
 
 ```bash
 # 1. Interactive setup (add your tokens here)
@@ -65,7 +86,7 @@ qobuzdl-collab dl tr-id XXXX
 
 ### Multiple tokens
 
-During `setup`, enter tokens comma-separated:
+During `setup` (or in the Colab config cell), enter tokens comma-separated / as a list:
 
 ```
 token1,token2,token3,...
