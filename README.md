@@ -1,6 +1,5 @@
 # qobuzdl-collab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb)
 
 Collaborative Qobuz downloader with **multi-token / region switching** support.
 
