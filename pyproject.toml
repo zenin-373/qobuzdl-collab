@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "qobuzdl-collab"
+version         = "0.1.0"
+description     = "Collaborative Qobuz downloader with multi-token region switching"
+readme          = "README.md"
+requires-python = ">=3.10"
+license         = { text = "GNU General Public License v3.0" }
+
+dependencies = [
+    "click>=8.1",
+    "requests>=2.31",
+    "rich>=13.0",
+    "mutagen>=1.47",
+    # Optional: PySocks gives SOCKS5 proxy support
+    # "PySocks>=1.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+qobuzdl-collab = "qobuz_dl.cli:cli"
+qobuz-dl = "qobuz_dl.cli:cli"
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["qobuz_dl*"]
