@@ -1,5 +1,7 @@
 # qobuzdl-collab
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb)
+
 Collaborative Qobuz downloader with **multi-token / region switching** support.
 
 Based on [jcomicsutils/qobuz-dl](https://github.com/jcomicsutils/qobuz-dl).
@@ -33,18 +35,16 @@ Artist Name/
 
 ## Google Colab (easiest)
 
-1. Open the notebook:  
-   **[qobuzdl_collab_colab.ipynb](https://github.com/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb)**  
-   → click **Open in Colab** (or File → Open notebook in Colab)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb)
 
-2. Run the cells in order:
-   - **Install**
-   - **Config** → put your `app_id`, `secret`, and tokens
-   - **Download** → paste album / artist / track URL
-   - **Zip & download** → get the files on your computer
+Click the badge above, or open:  
+**https://colab.research.google.com/github/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb**
 
-Direct Colab link (after opening the notebook once):  
-`https://colab.research.google.com/github/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb`
+Then run the cells in order:
+1. **Install**
+2. **Config** → put your `app_id`, `secret`, and tokens
+3. **Download** → paste album / artist / track URL
+4. **Zip & download** → get the files on your computer
 
 ## Local Installation
 
