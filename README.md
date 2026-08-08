@@ -1,5 +1,6 @@
 # qobuzdl-collab
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb)
 
 Collaborative Qobuz downloader with **multi-token / region switching** support.
 
@@ -40,10 +41,17 @@ Click the badge above, or open:
 **https://colab.research.google.com/github/zenin-373/qobuzdl-collab/blob/main/qobuzdl_collab_colab.ipynb**
 
 Then run the cells in order:
-1. **Install**
-2. **Config** → put your `app_id`, `secret`, and tokens
-3. **Download** → paste album / artist / track URL
-4. **Zip & download** → get the files on your computer
+
+1. **Install** — clones to `/content/qobuzdl-collab` only (no nested folders)
+2. **Config** — writes to `/root/.config/qobuz-dl/config.json` (same path as the CLI / terminal)
+3. **Auth test** (optional) — should return `Status: 200`
+4. **Download** — paste `ar-id` / `al-id` / `tr-id` or open/play.qobuz.com URL
+5. **Zip & download** — get files on your computer
+
+**Tips**
+- Website URLs like `www.qobuz.com/us-en/interpreter/...` are not supported — use the ID (`ar-id 687008`).
+- New token versions often need a matching app_id/secret from your token checker.
+- Cells and the Colab terminal now share the same config path.
 
 ## Local Installation
 
