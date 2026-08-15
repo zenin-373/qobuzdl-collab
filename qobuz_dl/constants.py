@@ -84,7 +84,7 @@ COVER_EMBED_MAX_BYTES: int = 16 * 1024 * 1024  # 16 MiB
 # Filesystem
 # ─────────────────────────────────────────────────────────────────────────────
 
-ILLEGAL_CHARS = r'/\?:*"<>|'
+ILLEGAL_CHARS = r'/\\?:*"<>|'
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Metadata
@@ -138,7 +138,7 @@ DEFAULT_CONFIG: Dict[str, Any] = {
     "download_dir":    str(Path.home() / "Music" / "Qobuz"),
     "quality":         "hi-res-192",
     "folder_template": "{main_artist}/{year} - {album}",
-    "track_template":  "{track:02d} - {title}",
+    "track_template":  "{title}",
     "multi_disc":      True,
     "save_cover":      True,
     # Size of the cover.jpg saved alongside tracks.
@@ -209,6 +209,6 @@ releases share the same name.
 
 Examples
 ─────────
-  Folder template:  {main_artist}/{album} ({year}) [{album_id}]
-  Track  template:  {track:02d} - {title} [{track_id}]
+  Folder template:  {main_artist}/{year} - {album}
+  Track  template:  {title}
 """
