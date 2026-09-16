@@ -131,7 +131,12 @@ def download_single_track(
         except Exception as e:
             console.print(f"  [yellow]URL fetch failed for '{title}': {e}[/]")
             ok_url = False
-            for tok in getattr(api, "all_tokens", lambda: [])() or []:
+            all_toks = getattr(api, "all_tokens", None)
+            if callable(all_toks):
+                all_toks = all_toks()
+            elif not isinstance(all_toks, (list, tuple)):
+                all_toks = []
+            for tok in (all_toks or []):
                 try:
                     url = api.get_track_url_with_token(int(track["id"]), str(qid), tok)
                     ok_url = True
